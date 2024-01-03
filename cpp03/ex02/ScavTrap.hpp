@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/19 18:00:02 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/03 13:52:25 by ldaniel          ###   ########.fr       */
+/*   Created: 2024/01/02 16:33:46 by ldaniel           #+#    #+#             */
+/*   Updated: 2024/01/03 12:06:33 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#pragma once
 
-int	main()
+#include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
 {
-	ClapTrap	ClapTrap("4trap");
-	ScavTrap	ScavTrap("Blyat");
+	private:
+		bool _guard;
+	public:
+		ScavTrap(std::string name);
+		~ScavTrap();
+};
 
-	ScavTrap.attack("Handsome Jack");
-	ClapTrap.attack("Maxime");
-	ScavTrap.takeDamage(50);
-	ClapTrap.takeDamage(5);
-	ScavTrap.beRepaired(2);
-	ClapTrap.beRepaired(2);
-	ScavTrap.takeDamage(8);
-	ClapTrap.takeDamage(8);
-	ScavTrap.beRepaired(1);
-	ScavTrap.guardGate();
-	ScavTrap.attack("Kylian");
-	return (0);
-}
+

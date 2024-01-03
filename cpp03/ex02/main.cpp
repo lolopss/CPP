@@ -6,7 +6,7 @@
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 18:00:02 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/03 13:52:25 by ldaniel          ###   ########.fr       */
+/*   Updated: 2024/01/03 12:16:41 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,5 @@ int	main()
 	ScavTrap.takeDamage(8);
 	ClapTrap.takeDamage(8);
 	ScavTrap.beRepaired(1);
-	ScavTrap.guardGate();
-	ScavTrap.attack("Kylian");
 	return (0);
 }

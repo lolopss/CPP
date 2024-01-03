@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/19 18:00:02 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/03 13:52:25 by ldaniel          ###   ########.fr       */
+/*   Created: 2024/01/02 15:27:11 by ldaniel           #+#    #+#             */
+/*   Updated: 2024/01/03 11:50:26 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#pragma once
 
-int	main()
+#include <iostream>
+#include <unistd.h>
+
+class ClapTrap
 {
-	ClapTrap	ClapTrap("4trap");
-	ScavTrap	ScavTrap("Blyat");
-
-	ScavTrap.attack("Handsome Jack");
-	ClapTrap.attack("Maxime");
-	ScavTrap.takeDamage(50);
-	ClapTrap.takeDamage(5);
-	ScavTrap.beRepaired(2);
-	ClapTrap.beRepaired(2);
-	ScavTrap.takeDamage(8);
-	ClapTrap.takeDamage(8);
-	ScavTrap.beRepaired(1);
-	ScavTrap.guardGate();
-	ScavTrap.attack("Kylian");
-	return (0);
-}
+	protected:
+		std::string _name;
+		int	_health = 10;
+		int	_energy = 10;
+		int _damage = 0;
+		std::string _type = "ClapTrap ";
+	public:
+		ClapTrap();
+		ClapTrap(const std::string &name);
+		void attack(const std::string& target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
+		~ClapTrap();
+};
