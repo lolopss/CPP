@@ -6,24 +6,25 @@
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 18:00:02 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/02 16:32:14 by ldaniel          ###   ########.fr       */
+/*   Updated: 2024/01/03 12:16:41 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main()
 {
-	ClapTrap	ClapTrap("CL4P-TP");
+	ClapTrap	ClapTrap("4trap");
+	ScavTrap	ScavTrap("Blyat");
 
-	ClapTrap.attack("Handsome Jack");
-	sleep(1);
+	ScavTrap.attack("Handsome Jack");
+	ClapTrap.attack("Maxime");
+	ScavTrap.takeDamage(50);
 	ClapTrap.takeDamage(5);
-	sleep(1);
+	ScavTrap.beRepaired(2);
 	ClapTrap.beRepaired(2);
-	sleep(1);
+	ScavTrap.takeDamage(8);
 	ClapTrap.takeDamage(8);
-	sleep(1);
-	ClapTrap.beRepaired(1);
+	ScavTrap.beRepaired(1);
 	return (0);
 }
