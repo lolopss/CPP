@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 15:27:11 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/03 14:02:51 by ldaniel          ###   ########.fr       */
+/*   Created: 2024/01/03 14:06:03 by ldaniel           #+#    #+#             */
+/*   Updated: 2024/01/03 14:11:18 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <unistd.h>
+#include "ScavTrap.hpp"
 
-class ClapTrap
+class FragTrap : public ClapTrap
 {
-	protected:
-		std::string _name;
-		int	_health = 10;
-		int	_energy = 10;
-		int _damage = 0;
-		std::string _type = "ClapTrap ";
+	private:
+
 	public:
-		ClapTrap();
-		ClapTrap(const std::string &name);
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		~ClapTrap();
+		FragTrap(std::string name);
+		void	highFivesGuys(void);
+		~FragTrap();
 };

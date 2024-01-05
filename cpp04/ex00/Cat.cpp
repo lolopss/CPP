@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 15:27:11 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/03 14:02:51 by ldaniel          ###   ########.fr       */
+/*   Created: 2024/01/03 17:53:37 by ldaniel           #+#    #+#             */
+/*   Updated: 2024/01/05 18:26:25 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Cat.hpp"
 
-#include <iostream>
-#include <unistd.h>
+std::string Cat::getType() const {
+	return (_type);
+}
 
-class ClapTrap
+void	Cat::makeSound() const {
+	std::cout << _type << " : Miaou\n";
+}
+
+Cat::Cat()
 {
-	protected:
-		std::string _name;
-		int	_health = 10;
-		int	_energy = 10;
-		int _damage = 0;
-		std::string _type = "ClapTrap ";
-	public:
-		ClapTrap();
-		ClapTrap(const std::string &name);
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		~ClapTrap();
-};
+	_type = "Cat";
+	std::cout << _type << " was created\n";
+}
+
+Cat::~Cat()
+{
+	std::cout << _type << " was destroyed\n";
+}

@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 15:27:11 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/03 14:02:51 by ldaniel          ###   ########.fr       */
+/*   Created: 2024/01/03 15:46:19 by ldaniel           #+#    #+#             */
+/*   Updated: 2024/01/05 15:11:03 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <unistd.h>
+#include "Animal.hpp"
 
-class ClapTrap
+class Cat : public Animal
 {
-	protected:
-		std::string _name;
-		int	_health = 10;
-		int	_energy = 10;
-		int _damage = 0;
-		std::string _type = "ClapTrap ";
 	public:
-		ClapTrap();
-		ClapTrap(const std::string &name);
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		~ClapTrap();
+		Cat();
+		void	makeSound() const;
+		std::string	getType() const;
+		~Cat();
 };

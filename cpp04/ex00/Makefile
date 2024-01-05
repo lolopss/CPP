@@ -1,6 +1,6 @@
-NAME	=	FragTrap
+NAME	=	Polymorphisme
 
-SRCS	=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS	=	main.cpp Animal.cpp Cat.cpp Dog.cpp
 
 OBJ =	${SRCS:.cpp=.o}
 

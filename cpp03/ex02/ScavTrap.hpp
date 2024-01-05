@@ -6,7 +6,7 @@
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 16:33:46 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/03 12:06:33 by ldaniel          ###   ########.fr       */
+/*   Updated: 2024/01/03 14:03:06 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,3 @@ class ScavTrap : public ClapTrap
 		ScavTrap(std::string name);
 		~ScavTrap();
 };
-
-
