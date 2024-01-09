@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 15:27:11 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/08 17:01:38 by ldaniel          ###   ########.fr       */
+/*   Created: 2023/08/09 18:29:02 by mlangloi          #+#    #+#             */
+/*   Updated: 2024/01/08 14:18:40 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include"Cat.hpp"
 
-#include <iostream>
-#include <unistd.h>
-
-class ClapTrap
+AAnimal::AAnimal()
 {
-	private:
-		std::string _name;
-		int	_health = 10;
-		int	_energy = 10;
-		int _damage = 0;
-	public:
-		ClapTrap(const std::string &name);
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		~ClapTrap();
-};
+	std::cout << "AAnimal was created" << std::endl;
+}
+
+AAnimal::~AAnimal()
+{
+	std::cout << "AAnimal was destroyed" << std::endl;
+}
+
+void AAnimal::makeSound()const
+{
+	std::cout << _type << " : [AAnimal sound]" << std::endl;
+}
+
+std::string AAnimal::getType()const
+{
+	return (_type);
+}

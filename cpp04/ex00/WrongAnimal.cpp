@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 15:27:11 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/08 17:01:38 by ldaniel          ###   ########.fr       */
+/*   Created: 2024/01/08 11:04:31 by ldaniel           #+#    #+#             */
+/*   Updated: 2024/01/08 12:31:24 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "WrongAnimal.hpp"
 
-#include <iostream>
-#include <unistd.h>
-
-class ClapTrap
+WrongAnimal::WrongAnimal()
 {
-	private:
-		std::string _name;
-		int	_health = 10;
-		int	_energy = 10;
-		int _damage = 0;
-	public:
-		ClapTrap(const std::string &name);
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		~ClapTrap();
-};
+	std::cout << "Wrong animal was created\n" << std::endl;
+}
+
+WrongAnimal::~WrongAnimal()
+{
+	std::cout << "Wrong animal was destroyed\n" << std::endl;
+}
+
+void WrongAnimal::makeSound()const
+{
+	std::cout << _type << " : [Wrong animal sound]\n" << std::endl;
+}
+
+std::string WrongAnimal::getType()const
+{
+	return (_type);
+}

@@ -6,7 +6,7 @@
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 15:25:40 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/08 13:32:37 by ldaniel          ###   ########.fr       */
+/*   Updated: 2024/01/08 14:15:32 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,18 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
+	// delete j;//should not create a leak
+	// delete i;
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	delete meta;
-	delete j;
-	delete i;
-	std::cout << '\n' << '\n';
-	const WrongAnimal* meta2 = new WrongAnimal();
-	const WrongAnimal* i2 = new WrongCat();
-
-	std::cout << i2->getType() << " " << std::endl;
-	i2->makeSound();
-	meta2->makeSound();
-	delete meta2;
-	delete i2;
+	const Animal *ani[4];
+	for (int i = 0; i < 2; i++)
+		ani[i] = new Dog();
+	std::cout << std::endl;
+	for (int i = 2; i < 4; i++)
+		ani[i] = new Cat();
+	for (int i = 0; i < 4; i++)
+		delete ani[i];
 	return 0;
 }

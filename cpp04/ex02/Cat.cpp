@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 15:27:11 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/08 17:01:38 by ldaniel          ###   ########.fr       */
+/*   Created: 2024/01/03 17:53:37 by ldaniel           #+#    #+#             */
+/*   Updated: 2024/01/08 13:27:02 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Cat.hpp"
 
-#include <iostream>
-#include <unistd.h>
+std::string Cat::getType() const {
+	return (_type);
+}
 
-class ClapTrap
+void	Cat::makeSound() const {
+	std::cout << _type << " : Miaou\n";
+}
+
+Cat::Cat()
 {
-	private:
-		std::string _name;
-		int	_health = 10;
-		int	_energy = 10;
-		int _damage = 0;
-	public:
-		ClapTrap(const std::string &name);
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		~ClapTrap();
-};
+	_type = "Cat";
+	std::cout << _type << " was created\n";
+	_Brain = new Brain();
+}
+
+Cat::~Cat()
+{
+	delete _Brain;
+	std::cout << _type << " was destroyed\n";
+}

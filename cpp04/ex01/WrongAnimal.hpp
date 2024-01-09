@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 15:27:11 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/08 17:01:38 by ldaniel          ###   ########.fr       */
+/*   Created: 2024/01/08 11:13:38 by ldaniel           #+#    #+#             */
+/*   Updated: 2024/01/08 12:29:16 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <unistd.h>
 
-class ClapTrap
+class WrongAnimal
 {
-	private:
-		std::string _name;
-		int	_health = 10;
-		int	_energy = 10;
-		int _damage = 0;
-	public:
-		ClapTrap(const std::string &name);
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		~ClapTrap();
+protected:
+	std::string _type;
+public:
+	WrongAnimal();
+	void makeSound()const;
+	virtual std::string getType()const;
+	~WrongAnimal();
 };

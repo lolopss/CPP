@@ -6,7 +6,7 @@
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 18:00:20 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/01/02 14:21:54 by ldaniel          ###   ########.fr       */
+/*   Updated: 2024/01/08 16:57:27 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class Fixed
 
 		float toFloat() const;
 		int toInt() const;
-
 
 		bool operator>(const Fixed &nbr)const;
 		bool operator<(const Fixed &nbr)const;

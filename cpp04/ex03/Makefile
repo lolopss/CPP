@@ -1,6 +1,6 @@
-NAME	=	Polymorphisme
+NAME	=	game
 
-SRCS	=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS	=	main.cpp 
 
 OBJ =	${SRCS:.cpp=.o}
 
