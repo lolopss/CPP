@@ -12,7 +12,7 @@
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name) : ClapTrap() {
+FragTrap::FragTrap(const std::string &name) : ClapTrap() {
 	_name = name;
 	_health = 100;
 	_energy = 100;

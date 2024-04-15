@@ -16,6 +16,8 @@ int	main()
 {
 	ClapTrap	ClapTrap("CL4P-TP");
 
+	int i;
+	
 	ClapTrap.attack("Handsome Jack");
 	sleep(1);
 	ClapTrap.takeDamage(5);

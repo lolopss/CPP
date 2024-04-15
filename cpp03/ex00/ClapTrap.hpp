@@ -21,9 +21,12 @@ class ClapTrap
 		std::string _name;
 		int	_health = 10;
 		int	_energy = 10;
-		int _damage = 0;
+		int	_damage = 0;
 	public:
+		ClapTrap();
 		ClapTrap(const std::string &name);
+		ClapTrap(const ClapTrap &b);
+		ClapTrap &operator=(const ClapTrap &other); // surcharge de l'operateur d'affectation
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);

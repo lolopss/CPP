@@ -12,7 +12,7 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap() {
+ScavTrap::ScavTrap(const std::string &name) : ClapTrap() {
 	_name = name;
 	_health = 100;
 	_energy = 50;

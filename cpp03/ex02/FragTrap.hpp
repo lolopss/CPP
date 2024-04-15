@@ -19,7 +19,10 @@ class FragTrap : public ClapTrap
 	private:
 
 	public:
-		FragTrap(std::string name);
+		FragTrap();
+		FragTrap(const std::string &name);
+		FragTrap(const FragTrap &b);
+		FragTrap &operator=(const FragTrap &other); // surcharge de l'operateur d'affectation
 		void	highFivesGuys(void);
 		~FragTrap();
 };
