@@ -6,7 +6,7 @@
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:33:09 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/04/15 18:33:01 by ldaniel          ###   ########.fr       */
+/*   Updated: 2024/04/18 13:51:39 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ class PmergeMe
         std::vector<int> get_vector();
         template<typename Container>
         void printContainer(const Container& container);
+        void sortDeque();
+        void sortVector();
 };
 

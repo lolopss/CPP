@@ -6,7 +6,7 @@
 /*   By: ldaniel <ldaniel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:31:56 by ldaniel           #+#    #+#             */
-/*   Updated: 2024/04/15 18:10:33 by ldaniel          ###   ########.fr       */
+/*   Updated: 2024/04/18 13:52:33 by ldaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,9 @@ int main(int ac, char **av){
     PmergeMe    merge;
     merge.addIntegers(ac, av);
     merge.printContainer(merge.get_deque());
-    merge.printContainer(merge.get_vector());
+    merge.sortDeque();
+    merge.sortVector();
+    merge.printContainer(merge.get_deque());
     
     //sort(ac, av);
     return (0);
